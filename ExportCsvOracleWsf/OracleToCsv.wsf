@@ -9,24 +9,24 @@
     ' note  :
     ' ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 
-    ' Const INI_FILE = "settings.ini"     ' iniファイル名
+    ' Const INI_FILE = "Config.ini"     ' iniファイル名　※ここで設定せずにbatファイルから指定
 
     Dim SQL_FOLDER_PATH, CSV_FOLDER_PATH
     Dim SDB_PROVIDER, SDB_DATA_SOURCE, SDB_USER, SDB_PASS
 
     Dim ini
-    ' ini = getCurrentDirectory() & "\" & INI_FILE
-    ini = getCurrentDirectory() & "\" & Wscript.Arguments(0)
+    ' ini = GetCurrentDirectory() & "\" & INI_FILE
+    ini = GetCurrentDirectory() & "\" & Wscript.Arguments(0)
 
     ' #### #### #### #### #### #### #### #### #### #### #### #### #### #### ####
     ' 0. iniファイルの読み込み　※実行VBSファイルと同じカレントフォルダに保存
-    SDB_PROVIDER = getIniData(ini, "source_db", "provider")
-    SDB_DATA_SOURCE = getIniData(ini, "source_db", "data_source")
-    SDB_USER = getIniData(ini, "source_db", "user_id")
-    SDB_PASS = getIniData(ini, "source_db", "password")
+    SDB_PROVIDER = GetIniData(ini, "source_db", "provider")
+    SDB_DATA_SOURCE = GetIniData(ini, "source_db", "data_source")
+    SDB_USER = GetIniData(ini, "source_db", "user_id")
+    SDB_PASS = GetIniData(ini, "source_db", "password")
 
-    SQL_FOLDER_PATH = getCurrentDirectory() & "\" & getIniData(ini, "path", "sql_folder")
-    CSV_FOLDER_PATH = getCurrentDirectory() & "\" & getIniData(ini, "path", "csv_folder")
+    SQL_FOLDER_PATH = GetCurrentDirectory() & "\" & GetIniData(ini, "path", "sql_folder")
+    CSV_FOLDER_PATH = GetCurrentDirectory() & "\" & GetIniData(ini, "path", "csv_folder")
     ' #### #### #### #### #### #### #### #### #### #### #### #### #### #### ####
 
     Dim objDBOracle     ' Oracle接続クラス
