@@ -1,7 +1,7 @@
 Option Explicit
 
 Const DEBUG_MODE = 1                ' 1:デバッグモード, 0:通常モード
-Const INI_FILE = "settings.ini"     ' iniファイル名
+Const INI_FILE = "Config.ini"     ' iniファイル名
 
 Dim SQL_FOLDER_PATH, CSV_FOLDER_PATH
 Dim SDB_PROVIDER, SDB_DATA_SOURCE, SDB_USER, SDB_PASS
