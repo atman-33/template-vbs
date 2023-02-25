@@ -15,6 +15,6 @@ Function GetCurrentDirectory()
         WScript.Echo "エラー: " & Err.Description
         wscript.quit(1)
     End If
-    getCurrentDirectory = objWshShell.CurrentDirectory
+    GetCurrentDirectory = objWshShell.CurrentDirectory
 
 End Function

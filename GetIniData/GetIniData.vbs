@@ -1,6 +1,6 @@
 Option Explicit
 
-Msgbox GetIniData(GetCurrentDirectory() & "\Settings.ini", "test1", "data1")
+Msgbox GetIniData(GetCurrentDirectory() & "\Config.ini", "test1", "data1")
 
 ' ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 ' breif : カレントフォルダを取得する。
@@ -15,7 +15,7 @@ Function GetCurrentDirectory()
         WScript.Echo "エラー: " & Err.Description
         wscript.quit(1)
     End If
-    getCurrentDirectory = objWshShell.CurrentDirectory
+    GetCurrentDirectory = objWshShell.CurrentDirectory
 
 End Function
 
